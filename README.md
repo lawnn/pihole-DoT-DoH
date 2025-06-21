@@ -81,18 +81,18 @@ kdig -d @your.domain.name +https google.com
 ```bash
 openssl s_client -connect your.domain.name:443 -servername your.domain.name
 ```
-✅ 動作中の確認（systemd）
+## ✅ 動作中の確認（systemd）
 ```bash
 sudo systemctl status dnsproxy
 ```
-出力例（正常動作中）:
+### 出力例（正常動作中）:
 
 ```bash
 ● dnsproxy.service - AdguardTeam/dnsproxy service
      Active: active (running) ...
      ExecStart=/opt/dnsproxy/start.sh
 ```
-📦 推奨環境
+## 📦 推奨環境
 |項目	|推奨
 |------|------|
 |OS              |Raspberry Pi OS / Ubuntu / Debian|
@@ -101,15 +101,17 @@ sudo systemctl status dnsproxy
 |接続             |IPv4/IPv6 両対応を推奨|
 ---
 
-📄 ライセンス
+## 📄 ライセンス
 このリポジトリは MIT License の下で公開されています。
 
-🙋 貢献・フィードバック
+## 🙋 貢献・フィードバック
 Issue や Pull Request 大歓迎！
 
 改善提案・不具合報告・機能要望などお気軽にご連絡ください。
 
-
+# Sources
+- https://github.com/jakenology/Tutorials/blob/master/Pi-hole/dnsproxy.md
+- https://github.com/AdguardTeam/dnsproxy
 
 
 
