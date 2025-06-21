@@ -69,14 +69,17 @@ https://your.domain.name/dns-query
 ✅ 動作確認コマンド
 DoT（DNS over TLS）
 
-# DoT の名前解決確認
+## DoT の名前解決確認
 `kdig -d @your.domain.name +tls-ca google.com`
-# TLS 通信ができているか確認
+## TLS 通信ができているか確認
 `openssl s_client -connect your.domain.name:853 -servername your.domain.name`
-DoH（DNS over HTTPS）
+
+## DoH（DNS over HTTPS） DoH による名前解決
 ```bash
-# DoH による名前解決
-curl -H 'accept: application/dns-json' 'https://your.domain.name/dns-query?name=example.com&type=A'
+kdig -d @your.domain.name +https google.com
+```
+```bash
+openssl s_client -connect your.domain.name:443 -servername your.domain.name
 ```
 ✅ 動作中の確認（systemd）
 ```bash
