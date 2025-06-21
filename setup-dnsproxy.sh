@@ -86,9 +86,6 @@ sudo systemctl enable dnsproxy
 sudo systemctl restart dnsproxy
 sudo systemctl status dnsproxy --no-pager
 
-# DNS over TLS (DoT) と DNS over HTTPS (DoH) の設定
-sudo apt install knot-dnsutils openssl
-
 # 動作確認 DoT
 echo "🔍 Checking DNS over TLS (DoT) and DNS over HTTPS (DoH) setup..."
 kdig -d @$DNS_DOMAIN_NAME +tls-ca google.com
