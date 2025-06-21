@@ -1,3 +1,4 @@
+#!/bin/bash
 # delete nginx.conf
 sudo rm /etc/nginx/nginx.conf
 
